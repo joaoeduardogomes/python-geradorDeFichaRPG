@@ -2,9 +2,11 @@ from random import randint
 from time import sleep
 
 def gera_atributos():
+    global classes_exibicao
     classes_exibicao = ('[1] guerreiro', '[2] arqueiro', '[3] mago', '[4] ladino', '[5] capanga', '[6] aleatório')
     for cont in range (0, len(classes_exibicao)):
         print(classes_exibicao[cont].title())
+    global escolha
     escolha = int(input("Escolha uma das classes (1 a 6): "))
 
     classes_execucao = {1: guerreiro(), 2: arqueiro(), 3: mago(), 4: ladino(), 5: capanga(), 6: aleatorio()}
@@ -49,6 +51,14 @@ def aleatorio():
                 #           FORÇA        HABILIDADE      ARMADURA      RESISTÊNCIA       MENTE          PDF
     valores_aleatorio = [randint(0, 5), randint(0, 5), randint(0, 5), randint(0, 5), randint(0, 5), randint(0, 5)]
 
+def resultado():
+    with open('ficha.txt', 'w') as f:
+        print(f"Ficha de {classes_exibicao[escolha - 1]}: ", file=f)
+        for k, v in atributos.items():
+            print(f"{k.title():^14}: {v}", file=f)
+        #print(atributos, file=f)
+    f.close()
+
 
 atributos_lista = ['força', 'habilidade', 'armadura', 'resistência', 'mente', 'poder de fogo']
 
@@ -57,6 +67,8 @@ gera_atributos()
 
 for k, v in atributos.items():
     print(f"{k.title():^14}: {v}")
+
+resultado()
 
 
 #atributos = {'força': 0, 'habilidade': 0, 'armadura': 0, 'resistência': 0, 'mente': 0, 'poder de fogo': 0}
