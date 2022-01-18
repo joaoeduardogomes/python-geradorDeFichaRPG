@@ -51,7 +51,7 @@ def aleatorio():
                 #           FORÇA        HABILIDADE      ARMADURA      RESISTÊNCIA       MENTE          PDF
     valores_aleatorio = [randint(0, 5), randint(0, 5), randint(0, 5), randint(0, 5), randint(0, 5), randint(0, 5)]
 
-def resultado():
+def exporta():
     with open('ficha.txt', 'w') as f:
         print(f"Ficha de {classes_exibicao[escolha - 1]}: ", file=f)
         for k, v in atributos.items():
@@ -68,7 +68,7 @@ gera_atributos()
 for k, v in atributos.items():
     print(f"{k.title():^14}: {v}")
 
-resultado()
+exporta()
 
 
 #atributos = {'força': 0, 'habilidade': 0, 'armadura': 0, 'resistência': 0, 'mente': 0, 'poder de fogo': 0}

@@ -1,7 +1,7 @@
 Ficha de [2] arqueiro: 
-    Força     : 2
-  Habilidade  : 3
-   Armadura   : 3
+    Força     : 3
+  Habilidade  : 2
+   Armadura   : 1
  Resistência  : 3
-    Mente     : 1
-Poder De Fogo : 4
+    Mente     : 0
+Poder De Fogo : 5
