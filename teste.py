@@ -1,25 +1,25 @@
 from random import randint
 from time import sleep
-import atributos
+import numeros
 
 
 
 
 
 atributos_lista = ['força', 'habilidade', 'armadura', 'resistência', 'mente', 'poder de fogo']
-
-lista = atributos.valores
+'''
+lista = numeros.valores
 
 #testando:
-atributos.gera_valores()
+numeros.gera_valores()
 
 print(lista)
 
-atributos.organiza_valores()
+numeros.organiza_valores()
 
 print(lista)
 
-atributos.embaralha_valores()
+numeros.embaralha_valores()
 
 print(lista)
 
@@ -28,3 +28,5 @@ print(max(lista))
 
 atributos = dict(zip(atributos_lista, lista))
 print(atributos)
+
+'''
