@@ -1,9 +1,9 @@
 import numeros
 
-def guerreiro():
-    numeros.gera_valores()
-    numeros.organiza_valores()
+def escolhe_classe(n):
+    escolha_classe = {1: guerreiro(), 2: arqueiro(), 3: mago(), 4: ladino(), 5: capanga(), 6: aleatorio()}
 
+def guerreiro():
     global atributos_guerreiro
     atributos_guerreiro = atributos.copy()
 
@@ -20,9 +20,6 @@ def guerreiro():
 
 
 def arqueiro():
-    numeros.gera_valores()
-    numeros.organiza_valores()
-
     global atributos_arqueiro
     atributos_arqueiro = atributos.copy()
 
@@ -39,9 +36,6 @@ def arqueiro():
 
 
 def mago():
-    numeros.gera_valores()
-    numeros.organiza_valores()
-
     global atributos_mago
     atributos_mago = atributos.copy()
 
@@ -58,9 +52,6 @@ def mago():
 
 
 def ladino():
-    numeros.gera_valores()
-    numeros.organiza_valores()
-
     global atributos_ladino
     atributos_ladino = atributos.copy()
 
@@ -76,9 +67,6 @@ def ladino():
     print(atributos_ladino)
 
 def capanga():
-    numeros.gera_valores(6)
-    numeros.organiza_valores()
-
     global atributos_capanga
 
     numeros.embaralha_valores(6)
@@ -89,9 +77,6 @@ def capanga():
 
 
 def aleatorio():
-    numeros.gera_valores()
-    numeros.organiza_valores()
-
     global atributos_aleatorio
 
     numeros.embaralha_valores(6)
@@ -120,15 +105,25 @@ print(max(valores_guerreiro))
 print(sum(valores_guerreiro))'''
 
 valores_importados = numeros.valores
+
 #valores_guerreiro = numeros.valores
 
 
-guerreiro() # O papel das classes é só mudar os valores embaralhados e a atribuição no dicionário
-arqueiro()
-mago()
-ladino()
-capanga()
-aleatorio()
+numeros.gera_valores()
+numeros.organiza_valores()
+
+escolhe_classe(int(input("1 a 6: ")))
+
+
+
+
+
+
+
+
+#guerreiro() # O papel das classes é só mudar os valores embaralhados e a atribuição no dicionário
+
+
 
 
 
