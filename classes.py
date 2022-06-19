@@ -27,9 +27,7 @@ def escolhe_classe(escolha):
     #escolha_classe = {1: guerreiro(), 2: arqueiro(), 3: mago(), 4: ladino(), 5: capanga(), 6: aleatorio()}
 
 def guerreiro():
-    global atributos_guerreiro
     atributos_guerreiro = atributos.copy()
-
 
     atributos_guerreiro['força'] = valores_importados[0]
     atributos_guerreiro['armadura'] = valores_importados[1]
@@ -39,12 +37,11 @@ def guerreiro():
     atributos_guerreiro['poder de fogo'] = valores_importados[5]
     
     print(atributos_guerreiro)
+    return atributos_guerreiro
 
 
 def arqueiro():
-    global atributos_arqueiro
     atributos_arqueiro = atributos.copy()
-
 
     atributos_arqueiro['poder de fogo'] = valores_importados[0]
     atributos_arqueiro['habilidade'] = valores_importados[1]
@@ -54,12 +51,11 @@ def arqueiro():
     atributos_arqueiro['força'] = valores_importados[5]
 
     print(atributos_arqueiro)
+    return atributos_arqueiro
 
 
 def mago():
-    global atributos_mago
     atributos_mago = atributos.copy()
-
 
     atributos_mago['mente'] = valores_importados[0]
     atributos_mago['habilidade'] = valores_importados[1]
@@ -69,12 +65,11 @@ def mago():
     atributos_mago['poder de fogo'] = valores_importados[5]
 
     print(atributos_mago)
+    return atributos_mago
 
 
 def ladino():
-    global atributos_ladino
     atributos_ladino = atributos.copy()
-
 
     atributos_ladino['habilidade'] = valores_importados[0]
     atributos_ladino['resistência'] = valores_importados[1]
@@ -84,23 +79,21 @@ def ladino():
     atributos_ladino['mente'] = valores_importados[5]
 
     print(atributos_ladino)
+    return atributos_ladino
 
 def capanga():
-    global atributos_capanga
-
 
     atributos_capanga = dict(zip(atributos, valores_importados))
 
     print(atributos_capanga)
-
+    return atributos_capanga
 
 def aleatorio():
-    global atributos_aleatorio
-
 
     atributos_aleatorio = dict(zip(atributos, valores_importados))
 
     print(atributos_aleatorio)
+    return atributos_aleatorio
 
 
 atributos = {'força': 0, 'habilidade': 0, 'armadura': 0, 'resistência': 0, 'mente': 0, 'poder de fogo': 0}
