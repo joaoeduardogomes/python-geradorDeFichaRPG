@@ -37,16 +37,16 @@ def gera_valores(num = 12, embaralha_numeros = 3):
                 if max(valores) >  5:
                     valores[c] -= (max(valores) - 5)
 
-    print(valores)
+    #print(valores)
     organiza_valores(valores)
-    print(valores)
+    #print(valores)
     embaralha_valores(valores, embaralha_numeros)
 
-    print(valores)
+    '''print(valores)
 
     print(max(valores))
 
-    print(sum(valores))
+    print(sum(valores))'''
     return valores
 
 
