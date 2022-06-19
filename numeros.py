@@ -2,11 +2,13 @@ from random import randint
 from random import shuffle
 
 
-def gera_valores(num = 12):
+def gera_valores(num = 12, embaralha_numeros = 3):
     '''
     -> gera valores para os atributos de uma ficha de rpg
     : param num: quantidade de pontos a serem distribuídos (12 por padrão)
     '''
+
+    valores = [0, 0, 0, 0, 0, 0]
 
     maximo = num
 
@@ -35,13 +37,26 @@ def gera_valores(num = 12):
                 if max(valores) >  5:
                     valores[c] -= (max(valores) - 5)
 
-def organiza_valores():
+    print(valores)
+    organiza_valores(valores)
+    print(valores)
+    embaralha_valores(valores, embaralha_numeros)
+
+    print(valores)
+
+    print(max(valores))
+
+    print(sum(valores))
+    return valores
+
+
+def organiza_valores(valores):
     '''
     -> organiza os valores gerados em ordem decrescente
     '''
     valores.sort(reverse=True)
 
-def embaralha_valores(embaralha_numeros = 3):
+def embaralha_valores(valores, embaralha_numeros):
     '''
     -> embaralha 'n' elementos para gerar personagens menos previsíveis em qual atributo recebe o maior valor
     : param embaralha_numeros: quantas posições da lista de valores gerados serão embaralhadas.
@@ -54,8 +69,8 @@ def embaralha_valores(embaralha_numeros = 3):
         valores[cont] = embaralha[cont]
 
 
-valores = [0, 0, 0, 0, 0, 0]
-
+# Teste:
+#gera_valores()
 
 '''gera_valores()
 

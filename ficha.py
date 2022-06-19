@@ -1,3 +1,5 @@
+"""Este é o primeiro esboço do código. Serve apenas para rascunho e é desconsiderado do projeto final"""
+
 from random import randint
 from time import sleep
 

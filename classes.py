@@ -1,13 +1,35 @@
+from ctypes import Structure
 import numeros
 
-def escolhe_classe(n):
-    escolha_classe = {1: guerreiro(), 2: arqueiro(), 3: mago(), 4: ladino(), 5: capanga(), 6: aleatorio()}
+def escolhe_classe(escolha):
+    match escolha:
+        case escolha if escolha == 1:
+            print("Escolha: guerreiro")
+            guerreiro()
+        case escolha if escolha == 2:
+            print("Escolha: arqueiro")
+            arqueiro()
+        case escolha if escolha == 3:
+            print("Escolha: mago")
+            mago()
+        case escolha if escolha == 4:
+            print("Escolha: ladino")
+            ladino()
+        case escolha if escolha == 5:
+            print("Escolha: capanga")
+            capanga()
+        case escolha if escolha == 6:
+            print("Escolha: aleatório")
+            aleatorio()
+        case default:
+            print("Opção inválida")
+
+    #escolha_classe = {1: guerreiro(), 2: arqueiro(), 3: mago(), 4: ladino(), 5: capanga(), 6: aleatorio()}
 
 def guerreiro():
     global atributos_guerreiro
     atributos_guerreiro = atributos.copy()
 
-    numeros.embaralha_valores(3) # embaralha os 3 primeiros valores (pos 0, 1 e 2)
 
     atributos_guerreiro['força'] = valores_importados[0]
     atributos_guerreiro['armadura'] = valores_importados[1]
@@ -23,7 +45,6 @@ def arqueiro():
     global atributos_arqueiro
     atributos_arqueiro = atributos.copy()
 
-    numeros.embaralha_valores(2)
 
     atributos_arqueiro['poder de fogo'] = valores_importados[0]
     atributos_arqueiro['habilidade'] = valores_importados[1]
@@ -39,7 +60,6 @@ def mago():
     global atributos_mago
     atributos_mago = atributos.copy()
 
-    numeros.embaralha_valores(2)
 
     atributos_mago['mente'] = valores_importados[0]
     atributos_mago['habilidade'] = valores_importados[1]
@@ -55,7 +75,6 @@ def ladino():
     global atributos_ladino
     atributos_ladino = atributos.copy()
 
-    numeros.embaralha_valores(2)
 
     atributos_ladino['habilidade'] = valores_importados[0]
     atributos_ladino['resistência'] = valores_importados[1]
@@ -69,7 +88,6 @@ def ladino():
 def capanga():
     global atributos_capanga
 
-    numeros.embaralha_valores(6)
 
     atributos_capanga = dict(zip(atributos, valores_importados))
 
@@ -79,7 +97,6 @@ def capanga():
 def aleatorio():
     global atributos_aleatorio
 
-    numeros.embaralha_valores(6)
 
     atributos_aleatorio = dict(zip(atributos, valores_importados))
 
@@ -88,32 +105,27 @@ def aleatorio():
 
 atributos = {'força': 0, 'habilidade': 0, 'armadura': 0, 'resistência': 0, 'mente': 0, 'poder de fogo': 0}
 
+
+
+# Importação da lista de 6 espaços
 #valores_importados = numeros.valores
-'''valores_guerreiro = numeros.valores
-print(valores_guerreiro)
-
-numeros.gera_valores()
-print(valores_guerreiro)
-
-numeros.organiza_valores()
-print(valores_guerreiro)
-
-numeros.embaralha_valores(4)
-print(valores_guerreiro)
-
-print(max(valores_guerreiro))
-print(sum(valores_guerreiro))'''
-
-valores_importados = numeros.valores
-
-#valores_guerreiro = numeros.valores
 
 
-numeros.gera_valores()
-numeros.organiza_valores()
 
-escolhe_classe(int(input("1 a 6: ")))
 
+valores_importados = numeros.gera_valores()
+
+
+escolhe_classe(int(input("""
+    Escolha sua classe pelo número indicado:
+    [1] = Guerreiro
+    [2] = Arqueiro
+    [3] = Mago
+    [4] = Ladino
+    [5] = Capanga
+    [6] = Aleatório
+
+    Sua escolha: """)))
 
 
 

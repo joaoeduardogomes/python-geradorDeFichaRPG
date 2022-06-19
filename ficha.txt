@@ -1,7 +1,7 @@
 Ficha de [1] guerreiro: 
-    Força     : 5
+    ForÃ§a     : 5
   Habilidade  : 3
    Armadura   : 4
- Resistência  : 5
+ ResistÃªncia  : 5
     Mente     : 3
 Poder De Fogo : 1
