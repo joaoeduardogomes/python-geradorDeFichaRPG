@@ -1,6 +1,6 @@
 def exibe_dados(atributos_sorteados):
-    soma = sum(atributos_sorteados.values())
-    print(f"Total de pontos distribuídos: {soma}")
+    #soma = sum(atributos_sorteados.values())
+    #print(f"Total de pontos distribuídos: {soma}")
 
     for k, v in atributos_sorteados.items():
         if k in ('PV', 'PF', 'PM'):

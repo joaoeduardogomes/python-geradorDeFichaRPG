@@ -5,7 +5,8 @@ from random import shuffle
 def gera_valores(num = 12, embaralha_numeros = 3):
     '''
     -> gera valores para os atributos de uma ficha de rpg
-    : param num: quantidade de pontos a serem distribuídos (12 por padrão)
+    :param num: quantidade de pontos a serem distribuídos (12 por padrão)
+    :param embaralha_numeros: passa como parâmetro o valor de itens embaralhados para o método "embaralha_valores"
     '''
 
     valores = [0, 0, 0, 0, 0, 0]
@@ -59,7 +60,7 @@ def organiza_valores(valores):
 def embaralha_valores(valores, embaralha_numeros):
     '''
     -> embaralha 'n' elementos para gerar personagens menos previsíveis em qual atributo recebe o maior valor
-    : param embaralha_numeros: quantas posições da lista de valores gerados serão embaralhadas.
+    :param embaralha_numeros: quantas posições da lista de valores gerados serão embaralhadas.
     '''
     embaralha = valores [0:embaralha_numeros] #serve pra pegar os 3 primeiros valores da lista 'valores' e embaralhar
     shuffle(embaralha) #Aqui embaralhamos os três elementos retirados
