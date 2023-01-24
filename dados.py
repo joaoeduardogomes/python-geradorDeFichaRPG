@@ -1,3 +1,5 @@
+# Terceiro arquivo do gerador de fichas.
+
 def exibe_dados(atributos_sorteados):
     #soma = sum(atributos_sorteados.values())
     #print(f"Total de pontos distribuídos: {soma}")

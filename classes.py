@@ -1,3 +1,5 @@
+# Ssegundo arquivo do gerador de fichas
+
 import numeros
 from time import sleep
 
@@ -162,28 +164,3 @@ def aleatorio(atributos_nomes, atributos_valores):
 
     #print(atributos_aleatorio)
     return atributos_aleatorio
-
-
-
-'''atributos_sorteados = escolhe_classe(int(input("""
-    Escolha sua classe pelo número indicado:
-    [1] = Guerreiro
-    [2] = Arqueiro
-    [3] = Mago
-    [4] = Ladino
-    [5] = Capanga
-    [6] = Aleatório
-
-    Sua escolha: """)))'''
-
-
-
-'''atributos_sorteados = escolhe_classe()
-
-for k, v in atributos_sorteados.items():
-    if k in ('PV', 'PF', 'PM'):
-        print(f"{k.upper()}: {v}")
-    else:
-        
-        print(f"{k.title()}: {v}")
-'''

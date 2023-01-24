@@ -1,3 +1,5 @@
+# Quarto arquivo do gerador de fichas.
+
 import classes
 import dados
 

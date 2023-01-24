@@ -1,3 +1,5 @@
+#Primeiro arquivo do gerador de fichas
+
 from random import randint
 from random import shuffle
 
@@ -38,16 +40,11 @@ def gera_valores(num = 12, embaralha_numeros = 3):
                 if max(valores) >  5:
                     valores[c] -= (max(valores) - 5)
 
-    #print(valores)
+
     organiza_valores(valores)
-    #print(valores)
+
     embaralha_valores(valores, embaralha_numeros)
 
-    '''print(valores)
-
-    print(max(valores))
-
-    print(sum(valores))'''
     return valores
 
 
@@ -68,27 +65,3 @@ def embaralha_valores(valores, embaralha_numeros):
     # Aqui eles são reatribuídos na lista de acordo com a ordem depois de embaralhados
     for cont in range (0, embaralha_numeros):
         valores[cont] = embaralha[cont]
-
-
-# Teste:
-#gera_valores()
-
-'''gera_valores()
-
-
-print(valores)
-
-print(max(valores))
-
-print(sum(valores))
-
-print()
-
-organiza_valores()
-print(valores)
-
-embaralha_valores()
-
-print(valores)'''
-
-# lembrar de fazer o cálculo de PV, PF e PM
