@@ -1,4 +1,4 @@
-# Ssegundo arquivo do gerador de fichas
+# Segundo arquivo do gerador de fichas
 
 import numeros
 from time import sleep
@@ -18,14 +18,22 @@ def escolhe_classe():
 
     Sua escolha: """))
 
-    return executa_classe(num_escolha)
+    try:
+        num_atributos = int(input("Quantos pontos deseja distribuir? (ideal: de 3 a 20) "))
+    except:
+        if num_escolha == 5:
+            num_atributos = 5 #se nada for inserido e tiver sido selecionado um capanga, o valor será convertido para 5.
+        else:
+            num_atributos = 12 #Se o valor recebido não for 'int', será considerado 12.
 
-def executa_classe(num_escolha):
+    return executa_classe(num_escolha, num_atributos)
+
+def executa_classe(num_escolha, num_atributos):
     '''
     -> Executa o método da classe escolhida, fazendo a distribuição dos valores de maneira mais coerente.
     :param num_escolha: é o valor escolhido no método "escolhe_classe", que será usado no pattern matching.
+    :param num_atributos: é o valor de pontos a serem distribuídos (padrão: 12)
     '''
-    num = 12 # var de pontos a serem distribuídos (padrão: 12)
     embaralha_numeros = 2 # var de elementos a serem embaralhados (padrão: 2)
 
     atributos_nomes = {'força': 0, 'habilidade': 0, 'armadura': 0, 'resistência': 0, 'mente': 0, 'poder de fogo': 0, 'PV': 0, 'PF': 0, 'PM': 0} # define o dicionário com os atributos
@@ -33,32 +41,32 @@ def executa_classe(num_escolha):
     match num_escolha:
         case 1:
             escolha_classe = 'guerreiro' # indicação para o usuário da classe da ficha a ser gerada.
-            atributos_valores = numeros.gera_valores(num = num, embaralha_numeros = 3) # aqui recebemos e guardamos os valores gerados em 'numeros.py' 
+            atributos_valores = numeros.gera_valores(num_atributos, embaralha_numeros = 3) # aqui recebemos e guardamos os valores gerados em 'numeros.py' 
             atributos_classe = guerreiro(atributos_nomes, atributos_valores) # aqui retornamos o resultado do dicionário com os atributos e seus respectivos valores
         case 2:
             escolha_classe = 'arqueiro'
-            atributos_valores = numeros.gera_valores(num = num, embaralha_numeros = embaralha_numeros)
+            atributos_valores = numeros.gera_valores(num_atributos, embaralha_numeros = embaralha_numeros)
             atributos_classe = arqueiro(atributos_nomes, atributos_valores)
         case 3:
             escolha_classe = 'mago'
-            atributos_valores = numeros.gera_valores(num = num, embaralha_numeros = embaralha_numeros)
+            atributos_valores = numeros.gera_valores(num_atributos, embaralha_numeros = embaralha_numeros)
             atributos_classe = mago(atributos_nomes, atributos_valores)
         case 4:
             escolha_classe = 'ladino'
-            atributos_valores = numeros.gera_valores(num = num, embaralha_numeros = embaralha_numeros)
+            atributos_valores = numeros.gera_valores(num_atributos, embaralha_numeros = embaralha_numeros)
             atributos_classe = ladino(atributos_nomes, atributos_valores)
         case 5:
             escolha_classe = 'capanga'
-            atributos_valores = numeros.gera_valores(num = 6, embaralha_numeros = 6)
+            atributos_valores = numeros.gera_valores(num_atributos, embaralha_numeros = 6)
             atributos_classe = capanga(atributos_nomes, atributos_valores)
         case 6:
             escolha_classe = 'personagem aleatório'
-            atributos_valores = numeros.gera_valores(num = num, embaralha_numeros = 6)
+            atributos_valores = numeros.gera_valores(num_atributos, embaralha_numeros = 6)
             atributos_classe = aleatorio(atributos_nomes, atributos_valores)
         case default:
             print("Opção inválida")
             
-    print(f"\nGerando ficha de {escolha_classe.capitalize()}:")
+    print(f"\nGerando ficha de {escolha_classe.capitalize()} com {num_atributos} pontos:")
     sleep(2)
 
     atributos_classe['PV'] = atributos_classe['resistência'] * 5
