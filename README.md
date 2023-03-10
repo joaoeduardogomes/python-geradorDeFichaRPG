@@ -40,7 +40,7 @@ Aqui, consideramos o atributo Mente para ser usado no cálculo dos PMs (pontos d
 
 6. Método `ladino` => gera ficha de ladino.
 
-7. Método capanga => gera uma ficha de capanga que, a princípio, é mais fraco — a não ser que o usuário informe um valor quando perguntado.
+7. Método `capanga` => gera uma ficha de capanga que, a princípio, é mais fraco — a não ser que o usuário informe um valor quando perguntado.
    
    1. Um capanga é, basicamente, um inimigo genérico que o mestre irá selecionar para situações de combate.
 
