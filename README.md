@@ -6,8 +6,6 @@ Aqui, consideramos o atributo Mente para ser usado no cálculo dos PMs (pontos d
 
 ## Organizando a bagunça:
 
-
-
 ### 1º arquivo — numeros.py
 
     Aqui são gerados os valores que serão distribuídos entre os atributos.
@@ -46,15 +44,11 @@ Aqui, consideramos o atributo Mente para ser usado no cálculo dos PMs (pontos d
 
 8. Método `aleatorio` => gera uma ficha com os valores divididos aleatoriamente entre os atributos. Como nenhum atributo é priorizado, o mestre tem a liberdade de decidir o estilo de luta deste personagem com base no resultado gerado.
 
-
-
 ## 3º arquivo — dados.py
 
     É o arquivo responsável por exibir os dados da ficha de personagem randomizada.
 
 1. Método `exibe_dados` => recebe os dados da ficha gerada e os exibe no terminal.
-
-
 
 ## 4º arquivo — entrada_usuario.py
 
