@@ -1,10 +1,14 @@
+### Project language: 🇧🇷
+
+---
+
 # Gerador de fichas 3D&T Alpha
 
 Este é um gerador de fichas simples baseado no sistema de RPg 3D&T Alpha.
 
 Aqui, consideramos o atributo Mente para ser usado no cálculo dos PMs (pontos de magia). Enquanto que o atributo Resistência é usado para calcular os PVs (pontos de vida) e PFs (pontos de fôlego).
 
-## Organizando a bagunça:
+## Entendendo os arquivos:
 
 ### 1º arquivo — numeros.py
 
@@ -55,3 +59,9 @@ Aqui, consideramos o atributo Mente para ser usado no cálculo dos PMs (pontos d
  É o arquivo com o qual o usuário deve interagir (executar).
 
 Ele vai chamar o **classes.py**, pegar os dados retornados e passá-los como parâmetro para o método` exibe_dados` do arquivo **dados.py**.
+
+## Licença
+![MIT license](https://img.shields.io/badge/License-MIT-%20?link=https%3A%2F%2Fchoosealicense.com%2Flicenses%2Fmit%2F)
+
+---
+Este projeto também foi feito em JavaScript: [link do projeto feito em JavaScript](https://github.com/joaoeduardogomes/JavaScript-geradorDeFichaRPG)
